@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct TransientArticle: Identifiable {
+public struct TransientArticle: Identifiable, Equatable {
 	public var id: URL { url }
 	public let url: URL
 	public let title: String?

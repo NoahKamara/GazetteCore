@@ -7,11 +7,11 @@
 
 import Foundation
 
-public struct TransientFeed: Identifiable {
+public struct TransientFeed: Identifiable, Equatable {
 	public var id: URL { url }
 	public let url: URL
 	public let link: URL?
-	public let title: String
+	public let title: String?
 	public var icon: TransientAsset? = nil
 	public let image: TransientAsset?
 	public let articles: [TransientArticle]
@@ -19,7 +19,7 @@ public struct TransientFeed: Identifiable {
 	public init(
 		url: URL,
 		link: URL?,
-		title: String,
+		title: String?,
 		image: TransientAsset?,
 		articles: [TransientArticle]
 	) {

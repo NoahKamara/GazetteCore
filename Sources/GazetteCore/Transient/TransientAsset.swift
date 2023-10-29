@@ -7,9 +7,9 @@
 
 import Foundation
 
-public struct TransientAsset {
+public struct TransientAsset: AssetProtocol, Equatable {
 	public let url: URL
-	public let data: Data?
+	public var data: Data?
 	
 	public init(url: URL, data: Data? = nil) {
 		self.url = url
